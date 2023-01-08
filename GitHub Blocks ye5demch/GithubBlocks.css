@@ -1,0 +1,41 @@
+*{
+    margin: 0 auto;
+    align-items: center;
+}
+
+.container{
+    background-color: whitesmoke;
+    margin: 0 auto;
+    width: 800px;
+    padding: 20px;
+    align-items: center;
+    
+
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: aqua;
+}
+img.octocat{
+    height: 20px;
+    width: 20px;
+    padding: 20px;
+    margin: 0;
+}
+
+.BlueBox{
+    background-color: cyan;
+    padding: 30px;
+}
+
+.PinkBox{
+    background-color: pink;
+    justify-content: center;
+}
+.whiteBox{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding:20px;
+}

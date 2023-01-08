@@ -1,0 +1,11 @@
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.col {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: lightcyan;
+}
