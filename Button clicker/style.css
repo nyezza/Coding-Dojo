@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    border:0;
+}
+
+#searching{
+    display: flex;
+    width: 400px;
+    height: 50px;
+    background-color: blanchedalmond;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#barcenter{
+    border: 02 solid black;
+    padding: 20px 20px;
+    
+    color: grey;
+
+}
