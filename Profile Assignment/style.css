@@ -1,8 +1,9 @@
+            /*universal standard*/
 *{
     padding: 0;
     margin:0;
 }
-
+        /* Header part*/
 #Header{
     background: black;  
     padding: 20px;
@@ -35,24 +36,71 @@
     padding: 3px 10px;
     justify-items: right;
 }
+        /*end of the header part*/
+        
+            /*main part*/
 
-#mosaique{
+            /*universal main styling*/
+#main{
+    width: 800px;
     display: flex;
     flex-wrap: wrap;
-    background-color: blueviolet;
-    margin-left: 100px;
-    margin-top: 20px;
-
+    margin: 20px auto;
+    justify-content: space-between;
 }
 
 
-
+                    /* first container*/
 #container1{
-    width: 100px;
-    background-color: blue;
-    margin: 20px;
+    height: 280px;
+    width: 350px;
+    border: 02px solid rgb(204,204,204);
 }
 
+                /* upper*/
+#upper{
+    padding: 30px;
+    background-color: rgb(23,162,184);
+}
+#upper img{
+    width: 50px;
+    height: 50px;
+    border: 02px solid gray;
+    border-radius: 50%;
+    margin-top: 05px;
+    position: fixed;
+}
+
+            /*main container 1*/
+#main1{
+    margin-top: 35px;
+    margin-left: 15px;
+}
+#seatle{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#seatle > img{
+    height: 20px;
+    width: 10px;
+}
+#description{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#edit{
+    align-items: center;
+}
+#edit img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+#edit a{
+    color: rgb(32,90,151);
+}
+
+                    /*   End of Container1 styling*/
 #container2{
     width: 100px;
     background-color: black;
