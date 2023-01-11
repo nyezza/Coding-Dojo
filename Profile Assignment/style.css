@@ -8,14 +8,21 @@
     background: black;  
     padding: 20px;
     font-family: 'Roboto', sans-serif;
+
+}
+#mainhead{
     display: flex;
-    justify-content: space-around;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 700px;
+    align-items: center;
+    
 }
 
 #right_part{
     color: white;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 10px;
     display: flex;
 }
 
@@ -23,6 +30,7 @@
     display: flex;
     margin-left: 20px;
     color: rgb(160,160,160);
+    align-items: center;
 }
 
 #link h4{
@@ -35,6 +43,8 @@
     color: white;
     padding: 3px 10px;
     justify-items: right;
+    font-style:normal;
+    font-weight: bolder;
 }
         /*end of the header part*/
         
@@ -42,11 +52,11 @@
 
             /*universal main styling*/
 #main{
-    width: 800px;
+    width: 700px;
     display: flex;
     flex-wrap: wrap;
     margin: 20px auto;
-    justify-content: space-between;
+    /*justify-content: space-around;*/
 }
 
 
@@ -54,12 +64,13 @@
 #container1{
     height: 280px;
     width: 350px;
-    border: 02px solid rgb(204,204,204);
+    border: 04px solid rgb(204,204,204);
+    margin: 10px;
 }
 
                 /* upper*/
 #upper{
-    padding: 30px;
+    padding: 40px;
     background-color: rgb(23,162,184);
 }
 #upper img{
@@ -101,10 +112,66 @@
 }
 
                     /*   End of Container1 styling*/
+
+                    /* Container 2 styling*/
 #container2{
-    width: 100px;
-    background-color: black;
-    margin: 20px;
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    border: 04px solid rgb(204,204,204);
+    
+}
+.upper2{
+    background-color: rgb(51,51,51);
+    padding: 05px;
+    display: flex;
+    align-items: center;
+}
+.upper2 p{
+    border: none;
+    border-radius: 50%;
+    background-color:rgb(204,204,204) ;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    padding: 07px;
+}
+
+.upper2 h4{
+    margin-left: 05px;
+    color:rgb(254,254,254)
+}
+.main2{
+    margin: 10px;
+}
+.todsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nameuser{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Profileimg {
+    height: 30px;
+    width: 30px;
+    border: 05;
+    border-radius: 50%;
+}
+.ok-btn, .decline-btn{
+    height: 20px;
+    width: 20px;
+    /*margin: 05px;*/
+}
+.nameuser p{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 40px;
+    font-weight: bold;
+
 }
 
 #container3{
