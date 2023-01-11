@@ -2,12 +2,13 @@
 *{
     padding: 0;
     margin:0;
+    font-family: 'Roboto', sans-serif;
 }
         /* Header part*/
 #Header{
     background: black;  
     padding: 20px;
-    font-family: 'Roboto', sans-serif;
+    
 
 }
 #mainhead{
@@ -53,12 +54,13 @@
             /*universal main styling*/
 #main{
     width: 700px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
     margin: 20px auto;
-    /*justify-content: space-around;*/
+    justify-content:space-evenly;
+    align-content: space-between;
 }
-
 
                     /* first container*/
 #container1{
@@ -131,7 +133,7 @@
     border: none;
     border-radius: 50%;
     background-color:rgb(204,204,204) ;
-    margin-left: 10px;
+    margin-left: 05px;
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
@@ -139,7 +141,7 @@
 }
 
 .upper2 h4{
-    margin-left: 05px;
+    font-size: 12px;
     color:rgb(254,254,254)
 }
 .main2{
@@ -154,6 +156,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 .Profileimg {
     height: 30px;
@@ -164,18 +167,77 @@
 .ok-btn, .decline-btn{
     height: 20px;
     width: 20px;
-    /*margin: 05px;*/
 }
+
 .nameuser p{
     font-size: 16px;
     margin-left: 10px;
     margin-right: 40px;
     font-weight: bold;
-
 }
 
+                    /* end of container 2 styling*/
+
+                    /* Container 3 styling*/
+
 #container3{
-    width: 100px;
-    background-color: pink;
-    margin: 20px;
+    width: 350px;
+    height: 130px;
+    border: 04px solid rgb(204,204,204);
+    margin: 10px;
+}
+.upper2 h4{
+    margin-left: 20px ;
+}
+
+#learn{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#datelearn{
+    margin-top: 05px;
+    margin-left: 10px;
+    color: rgb(102,102,102);
+    font-size: 14px;
+    font-weight: bolder;
+}
+#deslearn{
+    margin-top: 05px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+                    /* end of container 3 styling */
+
+                    /* Container 4 Styling */
+
+#container4{
+    width: 200px;
+    height: 280px;
+    
+    border: 04px solid rgb(204,204,204);
+}
+.nameuser1{
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.nameuser1 p{
+    margin-left: 10px;
+    font-weight: bold;
+}
+#footer{
+    padding: 10px;
+    border-top: 04px solid rgb(204,204,204);
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+#vmore{
+    margin-left: 10px;
+    color: rgb(29,89,151);
+    font-size: 14px;
 }
