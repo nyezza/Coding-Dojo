@@ -3,21 +3,49 @@
     margin: 0;
     border:0;
 }
-
-#searching{
-    display: flex;
-    width: 400px;
-    height: 50px;
-    background-color: blanchedalmond;
+#container{
+    width: 700px;
+    height: 900px;
     margin: 0 auto;
-    justify-content: space-between;
+
+}
+.header{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(204,204,204);
+}
+.barcenter {
+    width: 300px;
+    background-color: white;
+    padding: 10px;
+    color: brown;
 }
 
-#barcenter{
-    border: 02 solid black;
-    padding: 20px 20px;
-    
-    color: grey;
-
+.header h1{
+    margin-left: 20px;
+}
+.header button{
+    padding: 05px 10px;
+    background-color: rgb(43,120,228);
+    margin-right: 20px;
+    color: white;
+}
+#main{
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ninjabox{
+    width: 300px;
+    height: 200px;
+    border: 05px solid black;
+    margin-top: 20px;
+}
+.ninjabox h2{
+    margin: 10px;
+    font-family: fantasy;
 }
