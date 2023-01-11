@@ -14,7 +14,7 @@
 #mainhead{
     display: flex;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 700px;
     align-items: center;
     
@@ -39,7 +39,6 @@
 }
 
 .button button{
-    margin-right: 100px;
     background-color: rgb(23,162,184);
     color: white;
     padding: 3px 10px;
@@ -58,7 +57,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 20px auto;
-    justify-content:space-evenly;
+    justify-content:space-around;
     align-content: space-between;
 }
 
@@ -67,7 +66,7 @@
     height: 280px;
     width: 350px;
     border: 04px solid rgb(204,204,204);
-    margin: 10px;
+    margin:10px;
 }
 
                 /* upper*/
