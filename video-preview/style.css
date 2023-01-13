@@ -32,6 +32,13 @@ body {
     font-size: 1rem;
     cursor: pointer;
 }
+button:active{
+    box-shadow: none;
+}
+
+button:hover{
+    color: aqua;
+}
 
 .nav-container, .flex-container {
     width: 1080px;
