@@ -32,6 +32,13 @@ body {
     font-size: 1rem;
     cursor: pointer;
 }
+button:active{
+    box-shadow: none;
+}
+
+button:hover{
+    color: aqua;
+}
 
 .nav-container, .flex-container {
     width: 1080px;
@@ -112,11 +119,14 @@ body {
     display: flex;
     align-items: center;
     margin: 20px 0;
+    
 }
+
 
 .vid-s {
     width: 170px;
     margin-right: 10px;
+    
 }
 
 .video-title {
