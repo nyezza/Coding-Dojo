@@ -12,19 +12,22 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Dojo Weadher</h1>
-            <div class="nav-bar">
-                <h3>Burbank</h3>
-                <h3>Chicago</h3>
-                <h3>Dallas</h3>
-            </div>
+            <div class="top-header">
+                <h1>Dojo Weadher</h1>
+                <div class="nav-bar">
+                    <button onclick="ChangeCity()">Burbank</button>
+                    <button onclick="ChangeCity()">Chicago</button>
+                    <button onclick="ChangeCity()">Dallas</button>
+                </div>
+        </div>
+            
         </div>
         <div class="main">
             <div class="top-bar">
                 <h1>San Jose</h1>
                 <div class="unit-choise">
                     <label> show temperature in :</label>
-                    <select name="temperature" id="temp-select">
+                    <select name="temperature" id="temp-select" onchange="ConvertTmp('tday1')">
                         <option value="°C">°C</option>
                         <option value="°F">°F</option>
                     </select>
@@ -70,8 +73,16 @@
             </div>
         </div>
         <div class="footer">
-            <div class="text-part"></div>
-            <button id="popup-btn">accept</button>
+            
+            <img src="assets/cookie.png" alt="Cookies">
+            <div class="notice">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize
+                content and ads, to provide social media features and to 
+                analyse our traffic.<a href="#"*>Read more</a>
+                </p>
+            </div>
+            <button id="popup-btn" onclick="RmPopup()">I Accept</button>
         </div>
     </div>
     <script src="script.js"></script>
