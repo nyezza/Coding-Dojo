@@ -12,6 +12,7 @@ function ConvertTmp(id){
     if ((document.getElementById("temp-select")) == '°F'){
         var y= x + 32;
         console.log(y);
+        document.getElementById(id).innerText=(y);
+        
     }
-    document.getElementById(id).innerText=y;
 }
