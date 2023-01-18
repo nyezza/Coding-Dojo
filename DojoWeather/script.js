@@ -15,10 +15,8 @@ function ConvertTmp(){
     var y = document.getElementById("temp-select").innerText;
     console.log(y);
     if ((document.getElementById("temp-select")) == '°F'){
-        /*var f=32;
-        var z =sum(x,f);
-        console.log(z);
-        x++;
+        var y= x + 32;
+        console.log(y);
     }
-    document.getElementById(id).innerText=x;*/
+    document.getElementById(id).innerText=y;
 }
