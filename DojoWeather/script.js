@@ -6,17 +6,14 @@ function RmPopup(){
     document.querySelector(".footer").remove();
 }
 
-function ConvertTmp1(id){
+function ConvertTmp(id){
     var x= document.getElementById(id).innerText;
     console.log(x);
-    var y=document.querySelector("#temp-select option" ).innerText;
-    console.log(y);
     if ((document.getElementById("temp-select")) == '°F'){
         var y= x + 32;
         console.log(y);
-        document.getElementById(id).innerText=(y);
-        
     }
+    document.getElementById(id).innerText=y;
 }
 function ConvertTmp(){
     var x= document.getElementById(id).innerText;
