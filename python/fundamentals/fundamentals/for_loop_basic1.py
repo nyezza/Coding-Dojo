@@ -26,4 +26,3 @@ mult=15
 for m in range (lowNum,highNum):
     if m % mult==0:
         print(m)
-        
