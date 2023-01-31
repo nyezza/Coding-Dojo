@@ -154,7 +154,11 @@ None
 # def bar():
 #     print(3)
 # foo()
-
+"""
+=>1
+3
+2
+"""
 
 # #15
 # def foo():
@@ -167,3 +171,9 @@ None
 #     return 5
 # y = foo()
 # print(y)
+"""
+=>1
+3
+5
+10
+"""
