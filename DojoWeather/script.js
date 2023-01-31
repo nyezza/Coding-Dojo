@@ -1,5 +1,6 @@
 function ChangeCity(){
-    alert("Loading Weather report");
+    var e= document.querySelector(".nav-bar button").innerText;
+    alert(" Weather report for"%e );
 }
 
 function RmPopup(){
