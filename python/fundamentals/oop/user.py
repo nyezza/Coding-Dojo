@@ -19,14 +19,14 @@ nadhir = User("Nadhir Yezza","yezza.nadhir@gmail.com")
 aymen = User("Aymen", "aymen@gmail.com")
 nouha = User("Nouha","nouha@gmail.com")
 
-# print(f" th user name is : {nadhir.name}")
+print(f" th user name is : {nadhir.name}")
 
-# nadhir.make_deposit(500)
-# print(f"the new balance after deposit {nadhir.account_balance}")
+nadhir.make_deposit(500)
+print(f"the new balance after deposit {nadhir.account_balance}")
 
-# nadhir.make_withdrawal(1000)
-# print(f"the new balance after the withdrawal {nadhir.account_balance}")
-# nadhir.display_user_balance()
+nadhir.make_withdrawal(1000)
+print(f"the new balance after the withdrawal {nadhir.account_balance}")
+nadhir.display_user_balance()
 
 nadhir.make_deposit(500)
 nadhir.make_deposit(500)
