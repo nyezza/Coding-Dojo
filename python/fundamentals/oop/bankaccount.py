@@ -25,7 +25,7 @@ class BankAccount:
     def Account_inventory(cls):
         for ac in cls.costumers_account:
             ac.display_account_info()
-
+        
 nadhir_account= BankAccount(0.01,0)
 nouha_account=BankAccount(0.01,0)
 
