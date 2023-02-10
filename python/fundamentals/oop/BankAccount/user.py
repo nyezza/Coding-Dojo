@@ -4,9 +4,4 @@ class User:
         self.name=name
         self.email=email
         self.age=age
-        self.account=[BankAccount.accounts()]
-
-n_account=BankAccount(1000)
-nadhir=User('Nadhir','yezza.nadhir@gmail.com',36)
-print(n_account.Bank_name,n_account.balance)
-print(nadhir.account)
+    
