@@ -1,0 +1,4 @@
+select * from users;
+insert into users (name) values('Jane Amsden'),('Emily Dixon'),('Theodore Dostoevsky'),('William Shapiro'),('Lao Xiu');
+insert into books (name) values('C Sharp'), ('Java'), ('Python'), ('PHP'),('Ruby');
+update books set name="c#"where id = 1;

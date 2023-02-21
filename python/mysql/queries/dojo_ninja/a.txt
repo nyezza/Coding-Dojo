@@ -1,0 +1,45 @@
+--
+insert into dojos (name) values ("nedhir");
+insert into dojos (name) values ("nouha");
+insert into dojos (name) values ("nichal");
+--
+delete from dojos where id IN (1,2,3);
+--
+select * from ninjas;
+select * from dojos;
+--
+insert into ninjas (dojo_id,first_name,last_name,age) values ((select id from dojos where name="nedhir"),"sassouki","ben sassouki",14);
+insert into ninjas (dojo_id,first_name,last_name,age) values ((select id from dojos where name="nedhir"),"sassouki2","ben sassouki",14);
+insert into ninjas (dojo_id,first_name,last_name,age) values ((select id from dojos where name="nedhir"),"sassouki3","ben sassouki",14);
+--
+insert into ninjas (dojo_id,first_name,last_name,age) values ((select id from dojos where name="nouha"),"jambo","ben jambo",14);
+insert into ninjas (dojo_id,first_name,last_name,age) values ((select id from dojos where name="nouha"),"jambo 2","ben jambo",14);
+insert into ninjas (dojo_id,first_name,last_name,age) values ((select id from dojos where name="nouha"),"Jambo 3","ben jambo",14);
+--
+insert into ninjas (dojo_id,first_name,last_name,age) values
+((select id from dojos where name="nichal"),"luffy","MC",18),
+((select id from dojos where name="nichal"),"zoro","roro",20),
+((select id from dojos where name="nichal"),"slim","cuisto",30);
+--
+select * from dojos 
+join ninjas 
+where dojos.name="nedhir";
+--
+select * from dojos
+join ninjas
+where dojos.name="nichal";
+--
+select * from dojos
+join ninjas
+where dojos.id=ninjas.dojo_id
+order by dojos.id desc;
+--
+select * from dojos
+join ninjas
+where dojos.id=ninjas.dojo_id
+order by dojos.id asc;
+--
+select * from dojos
+join ninjas
+where dojos.id=ninjas.dojo_id 
+order by dojos.id desc limit 1;

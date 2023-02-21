@@ -1,0 +1,10 @@
+select * from users;
+insert into users (first_name,last_name,email) values ("Nadhir","Yezza","yezza.nadhir@gmail.com");
+insert into users (first_name,last_name,email) values ("Nadhir","Yezza","yezza.nadhir@hotmail.com");
+insert into users (first_name,last_name,email) values ("Nouha","Jedidi","jedidi.nouha@hotmail.com");
+select * from users;
+select * from users where email="yezza.nadhir@gmail.com";
+update users set last_name= "Panakes" where id =3;
+delete from users where id = 2;
+select * from users order by first_name;
+select * from users order by first_name desc;
