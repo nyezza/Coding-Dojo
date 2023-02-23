@@ -13,15 +13,8 @@
 table{
     border: 05px solid black;
 }
-#colorbox-white{
-    background-color: burlywood;
+td{
     width: 100px;
     height: 100px; 
-    border: 02 solid black;
-}
-#colorbox-red{
-    background-color: red;
-    width: 100px;
-    height: 100px;
     border: 02 solid black;
 }

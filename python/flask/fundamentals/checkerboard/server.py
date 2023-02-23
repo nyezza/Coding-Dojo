@@ -14,6 +14,10 @@ def simple_dim(row):
 def double_dim(row,col):
     return render_template('index.html',y=row,x=col)
 
+@app.route('/<int:row>/<int:col>/<string:color1>/<string:color2>')
+def bonus(row,col,color1,color2):
+    return render_template('index.html',y=row,x=col,color1=color1,color2=color2)
+
 
 
 if __name__=='__main__':

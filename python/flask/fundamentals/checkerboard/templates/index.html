@@ -16,9 +16,9 @@
                     <tr>
                         {%for j in range (0,x)%}
                             {%if (j+i) % 2 ==0 %}
-                                <td id="colorbox-red"></td>
+                                <td style="background-color: {{color1}};"></td>
                             {%else%}
-                                <td id="colorbox-white"></td>
+                                <td style="background-color: {{color2}};"></td>
                             {%endif%}
                         {%endfor%}
                     </tr>
