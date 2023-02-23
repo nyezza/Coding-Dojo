@@ -16,78 +16,19 @@
 <body>
     <div class="container">
         <table>
-    
-            {% for i in range (0,y)%}
-                <tr>
-                
-                    <tb id="colorbox-white"></tb>
-                    <tb id="colorbox-red"></tb>               
-                </tr>
-                <tr>
-                    <tb id="colorbox-red"></tb>
-                    <tb id="colorbox-white"></tb>               
-                </tr>
-            {%endfor%}
-            <!--<tr>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>                
-            </tr>
-            <tr>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>               
-            </tr>
-            <tr>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>                
-            </tr>
-            <tr>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>               
-            </tr>
-            <tr>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>                
-            </tr>
-            <tr>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>
-                <tb id="colorbox-red"></tb>
-                <tb id="colorbox-white"></tb>               
-            </tr> -->
+            <tbody>
+                {%for i in range (0,y)%}
+                    <tr>
+                        {%for j in range (0,x)%}
+                            {%if (j+i) % 2 ==0 %}
+                                <td id="colorbox-red"></td>
+                            {%else%}
+                                <td id="colorbox-white"></td>
+                            {%endif%}
+                        {%endfor%}
+                    </tr>
+                {%endfor%}    
+            </tbody>
         </table>
     </div>
 </body>
