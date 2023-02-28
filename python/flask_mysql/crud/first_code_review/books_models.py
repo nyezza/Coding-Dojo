@@ -25,3 +25,12 @@ class Book:
         for row in result:
             books.append(cls(row))
         return books
+    @classmethod
+    def create(cls,date):
+        query = """
+            INSERT INTO books
+            (title,isbn,author,publisher,published_year,image_s,image_m,image_l)
+            values (%(title)s,%(isbn)s,%(author)s,%(publisher)s,%(published_year)s,%(image_s)s,%(image_m)s,%(image_l)s)
+        """
+        result=connectToMySQL("books_store").query_db(query.data)
+        return result
