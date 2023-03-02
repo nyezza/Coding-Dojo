@@ -13,22 +13,26 @@
     <div class="container">
         <div class="row d-flex justify_between">
             <h1 class="text-center">ALL Users</h1>
-            <!-- <a href="/books/new" class="btn btn-dark"> Add New Book</a> -->
+            <a href="/user/new" class="btn btn-dark"> Add New User</a>
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>First Name</th>
-                    <th>last Name</th>
+                    <th>Last Name</th>
                     <th>Email</th>
                 </tr>
             </thead>
             <tbody>
-                {% for users_list in users_list%}
+                {% for x in users_list%}
                     <tr>
-                        
+                        <th>{{x.id}}</th>
+                        <th>{{x.first_name}}</th>
+                        <th>{{x.last_name}}</th>
+                        <th>{{x.email}}</th>
                     </tr>
+                {%endfor%}
             </tbody>
         </table>
     </div>
