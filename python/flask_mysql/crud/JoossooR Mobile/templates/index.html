@@ -19,35 +19,36 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Code Client</th>
+                    <!-- <th>Code Client</th>
                     <th>Société</th>
-                    <th>Site</th>
+                    <th>Site</th> -->
                     <th>N°</th>
                     <th>Porteur</th>
                     <th>Forfait</th>
-                    <th>Montant Sans Remise</th>
+                    <!-- <th>Montant Sans Remise</th>
                     <th>Montant Avec Remise</th>
                     <th>Date de création de la ligne</th>
-                    <th>Derniere Modification</th>
+                    <th>Derniere Modification</th> -->
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 {% for x in porter_list %}
                     <tr>
                         <td>{{x.id}}</td>
-                        <td>{{x.code_client}}</td>
+                        <!-- <td>{{x.code_client}}</td>
                         <td>{{x.societe}}</td>
-                        <td>{{x.site}}</td>
+                        <td>{{x.site}}</td> -->
                         <td>{{x.numero}}</td>
                         <td>{{x.porteur}}</td>
                         <td>{{x.forfait}}</td>
-                        <td>{{x.montant_ssr}}</td>
+                        <!-- <td>{{x.montant_ssr}}</td>
                         <td>{{x.montant_ar}}</td>
                         <td>{{x.created_at}}</td>
-                        <td>{{x.updated_at}}</td>
+                        <td>{{x.updated_at}}</td> -->
                         <td>
-                            <a href="" class="btn btn-primary">View</a>
-                            <a href="" class="btn btn-warning">Edit</a>
+                            <a href="/porter/{{x.id}}" class="btn btn-primary">View</a>
+                            <a href="/porter/update/{{x.id}}" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger">Delete</a>
                         </td>
     

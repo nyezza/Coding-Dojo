@@ -15,13 +15,30 @@ def Read_all():
 def new():
     return render_template("new.html")
 
-@app.route('/porter/create')
+@app.route('/porter/create',methods=['post'])
 def create():
     User.create(request.form)
     return redirect('/')
+
+@app.route ('/porter/<int:user_id>')
+def get_one(user_id):
+    data={
+        "id":user_id
+    }
+    one_porter = User.get_one(data)
+    return render_template("view.html", one_user=one_porter)
     
+@app.route('/porter/update/<int:user_id>')
+def update_by_id(user_id):
+    update_one=User.get_one({"id":user_id})
+    return render_template("update.html",one_user=update_one)
 
-
+@app.route('/porter/update',methods=['post'])
+def update():
+    print(request.form)
+    User.update(request.form)
+    return redirect('/')
+    
 
 
 

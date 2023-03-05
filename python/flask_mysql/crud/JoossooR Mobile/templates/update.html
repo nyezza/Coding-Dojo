@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Porter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Update Number : {{one_user.numero}}</h1>
+        <a href="/" class="btn btn-dark" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: xx-large;"> Home</a>
+        <form action="/porter/update" method="post">
+            <div class="form-group">
+                <label for="" style="color: brown;">Code Client</label>
+                <input type="text" name="code_client" class="form-control" value="{{one_user.code_client}}">
+            </div>
+            <input type="hidden" name="id" value="{{one_user.id}}">
+            <div class="form-group">
+                <label for="" style="color: brown;">Société</label>
+                <input type="text" name="societe" class="form-control" value="{{one_user.societe}}">
+            </div>
+            <div class="form-group">
+                <label for="" style="color: brown;">Site</label>
+                <input type="text" name="site" class="form-control" value="{{one_user.site}}">
+            </div>
+            <div class="form-group">
+                <label for="" style="color: brown;">N°</label>
+                <input type="number" name="numero" class="form-control" value="{{one_user.numero}}">
+            </div>
+            <div class="form-group">
+                <label for="" style="color: brown;">Porteur</label>
+                <input type="text" name="porteur" class="form-control" value="{{one_user.porteur}}">
+            </div>
+            <div class="form-group">
+                <label for="" style="color: brown;">Forfait</label>
+                <input type="text" name="forfait" class="form-control" value="{{one_user.forfait}}">
+            </div>
+            <div class="form-group">
+                <label for="" style="color: brown;">Montant SS Remise</label>
+                <input type="number" name="montant_ssr" class="form-control" value="{{one_user.montant_ssr}}">
+            </div>
+            <div class="form-group">
+                <label for="" style="color: brown;">Montant Avec Remise</label>
+                <input type="number" name="montant_ar" class="form-control" value="{{one_user.montant_ar}}">
+            </div>
+            <button class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

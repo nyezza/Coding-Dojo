@@ -31,4 +31,27 @@ class User:
         result=connectToMySQL("joossoor_mobile").query_db(query,data)
         return result
     
+    @classmethod
+    def get_one(cls,data):
+        query=""" 
+            SELECT * FROM users WHERE id = %(id)s; 
+        """
+        results= connectToMySQL("joossoor_mobile").query_db(query,data)
+        print ("le resultat est :",results,"*"*20)
+        return cls(results[0])
     
+    @classmethod
+    def update(cls,data):
+        query="""
+            UPDATE users SET 
+                code_client=%(code_client)s,
+                societe=%(societe)s,
+                site=%(site)s,
+                numero=%(numero)s,
+                porteur=%(porteur)s,
+                forfait=%(forfait)s,
+                montant_ssr=%(montant_ssr)s,
+                montant_ar=%(montant_ar)s 
+            WHERE id=%(id)s;
+        """
+        return connectToMySQL("joossoor_mobile").query_db(query,data)
