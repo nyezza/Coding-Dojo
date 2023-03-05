@@ -12,9 +12,11 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center">Update Number : {{one_user.numero}}</h1>
-        <a href="/" class="btn btn-dark" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: xx-large;"> Home</a>
-        <form action="/porter/update" method="post">
+        <div>
+            <h1 class="text-center">Update Number : {{one_user.numero}}</h1>
+            <a href="/" class="btn btn-primary"> Home</a>
+        </div>
+        <form style="margin-top: 30px;" action="/porter/update" method="post">
             <div class="form-group">
                 <label for="" style="color: brown;">Code Client</label>
                 <input type="text" name="code_client" class="form-control" value="{{one_user.code_client}}">
@@ -49,6 +51,8 @@
                 <input type="number" name="montant_ar" class="form-control" value="{{one_user.montant_ar}}">
             </div>
             <button class="btn btn-success">Submit</button>
+            <a href="/" class="btn btn-primary"> Annuler</a>
+
         </form>
     </div>
 

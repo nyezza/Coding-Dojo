@@ -13,8 +13,9 @@
     <div class="container">
         <div class="row d-flex justify_between">
             <h1 class="text-center">ALL JOOSSOOR Mobile</h1>
-            <a href="/porter/new" class="btn btn-dark"> Add New User</a>
+            
         </div>
+        <a href="/porter/new" class="btn btn-success"> Add New User</a>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -25,10 +26,6 @@
                     <th>N°</th>
                     <th>Porteur</th>
                     <th>Forfait</th>
-                    <!-- <th>Montant Sans Remise</th>
-                    <th>Montant Avec Remise</th>
-                    <th>Date de création de la ligne</th>
-                    <th>Derniere Modification</th> -->
                     <th>Action</th>
                 </tr>
             </thead>
@@ -36,20 +33,13 @@
                 {% for x in porter_list %}
                     <tr>
                         <td>{{x.id}}</td>
-                        <!-- <td>{{x.code_client}}</td>
-                        <td>{{x.societe}}</td>
-                        <td>{{x.site}}</td> -->
                         <td>{{x.numero}}</td>
                         <td>{{x.porteur}}</td>
                         <td>{{x.forfait}}</td>
-                        <!-- <td>{{x.montant_ssr}}</td>
-                        <td>{{x.montant_ar}}</td>
-                        <td>{{x.created_at}}</td>
-                        <td>{{x.updated_at}}</td> -->
                         <td>
                             <a href="/porter/{{x.id}}" class="btn btn-primary">View</a>
                             <a href="/porter/update/{{x.id}}" class="btn btn-warning">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <a href="/porter/delete/{{x.id}}" class="btn btn-danger">Delete</a>
                         </td>
     
                     </tr>

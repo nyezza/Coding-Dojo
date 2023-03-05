@@ -13,10 +13,9 @@
     <div class="container justify-content-center">
         <div>
             <h1 style="color: aqua; text-align: center;">{{one_user.porteur}}</h1>
-            <a href="/" class="btn btn-dark" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: xx-large;"> Home</a>
         </div>
         <div>
-            <h1 style="color: blueviolet;">N°: {{one_user.numero}}</h1>
+            <h1 style="color: blueviolet; margin-bottom: 30px;">N°: {{one_user.numero}}</h1>
             <h4>Code Client: {{one_user.code_client}}</h4>
             <h4>Société: {{one_user.societe}}</h4>
             <h4>Site: {{one_user.site}}</h4>
@@ -26,6 +25,11 @@
             <h4>Montant Avec Remise: {{one_user.montant_ar}}</h4>
             <h4>Date de création de la ligne: {{one_user.updated_at}}</h4>
             <h4>Derniere Modification: {{one_user.created_at}}</h4>
+        </div>
+        <div style="margin-top: 50px;">
+            <a href="/" class="btn btn-primary"> Home</a>
+            <a href="/porter/update/{{one_user.id}}" class="btn btn-warning">Edit</a>
+            <a href="/porter/delete/{{one_user.id}}" class="btn btn-danger">Delete</a>
         </div>
                     
                 

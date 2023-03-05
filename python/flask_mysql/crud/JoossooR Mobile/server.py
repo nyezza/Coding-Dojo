@@ -38,6 +38,11 @@ def update():
     print(request.form)
     User.update(request.form)
     return redirect('/')
+
+@app.route('/porter/delete/<int:user_id>')
+def delete_one(user_id):
+    User.delete({"id":user_id})
+    return redirect('/')
     
 
 
