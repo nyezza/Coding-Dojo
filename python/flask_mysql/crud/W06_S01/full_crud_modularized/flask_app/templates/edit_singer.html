@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Singer</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Edit Singer</h1>
+        <form action="/singers/update" method="post">
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" name="name" class="form-control" value="{{singer.name}}">
+            </div>
+            <div class="form-group">
+                <label for="">Nationality</label>
+                <input type="text" name="nationality" class="form-control" value="{{singer.nationality}}" >
+            </div>
+            <div class="form-group">
+                <label for="">Rate</label>
+                <input type="number" name="rate" class="form-control" value="{{singer.rate}}">
+            </div>
+            <div class="form-group">
+                <label for="">Best Song</label>
+                <input type="text" name="best_song" class="form-control" value="{{singer.best_song}}">
+            </div>
+            <div class="form-group">
+                <label for="">Image</label>
+                <input type="text" name="image" class="form-control" value="{{singer.image}}">
+            </div>
+            <input type="hidden" name="id" value="{{singer.id}}">
+            <br>
+            <img src="{{singer.image}}" width="200" height="200" alt="">
+            <br>
+            <button class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
