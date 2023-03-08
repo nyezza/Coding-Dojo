@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>DOJOS Ninja</title>
+</head>
+<body>
+    <div class="container" style="justify-content: center;">
+        <div class="row" style="margin-top: 40px; display: flex; justify-content: space-between;">
+            <div class="col-4">
+                <h2>New dojo</h2>
+                <form action="/dojo/create" method="post">
+                    <div class="form-group">
+                        <label for="">name</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <a href="/" class="btn btn-success" style="justify-items: center;">create</a>
+                </form>
+            </div>
+            <div class="col-6">
+                <h2>All Dojo</h2>
+                <table class="table-striped" style="border: 2px solid black;">
+                    <tbody>
+                        {% for x in dojo_list %}
+                            <tr>
+                            <a href="">{{x.name}}</a>
+                            </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+                <a href="/create/ninja" class="btn btn-black" style="margin-top: 50px;">New Ninja</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
