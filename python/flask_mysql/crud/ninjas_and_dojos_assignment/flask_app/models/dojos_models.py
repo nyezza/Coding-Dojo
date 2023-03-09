@@ -9,7 +9,7 @@ class Dojos:
     
     @classmethod
     def create(cls,data):
-        query="""INSERT INTO dojos (name) VALUES (%(name)s);"""
+        query="""INSERT INTO dojos_and_ninjas.dojos (name) VALUES (%(name)s);"""
         results=connectToMySQL(DATABASE).query_db(query,data)
         return results
     
@@ -21,3 +21,8 @@ class Dojos:
         for x in results:
             dojoslist.append(cls(x))
         return dojoslist
+    
+    @classmethod
+    def get_by_id(cls,data):
+        query="""SELECT first_name,last_name,age FROM ninjas LEFT JOIN dojos ON dojos.id = ninjas.dojo_id WHERE dojos.id=%(id)s;""" 
+        return connectToMySQL(DATABASE).query_db(query,data)

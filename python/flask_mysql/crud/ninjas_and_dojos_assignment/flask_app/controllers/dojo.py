@@ -17,3 +17,11 @@ def create_dojos():
     print(request.form)
     Dojos.create(request.form)
     return redirect('/')
+
+@app.route('/dojo/<int:id_dojo>')
+def display(id_dojo):
+    da={
+        "id":id_dojo
+    }
+    dojos_dicover=Dojos.get_by_id(da)
+    return render_template("display_dojos_ninjas.html",ninjas_list=dojos_dicover)

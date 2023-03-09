@@ -13,13 +13,15 @@
         <h1 class="text-center">New Ninja</h1>
                 <form action="/ninjas/new" method="post">
                     <div class="form-group">
-                        <label for="">Dojo:</label>
-                        <select name="Dojo" class="form-control">
+                        <label for="do">Dojo:</label>
+                        <select id="do" name="Dojo" class="form-control">
                             {% for y in all_dojos %}
-                                <option value="{{y.name}}" >{{y.name}}</option>
+                                <option value="{{y.id}}" name="dojo_id" type="hidden" >{{y.name}}</option>
+                    
                             {%endfor%}
                         </select>
                     </div>
+
                     <div class="form-group">
                         <label for="">First Name:</label>
                         <input type="text" name="first_name" class="form-control">
@@ -32,7 +34,7 @@
                         <label for="">Age:</label>
                         <input type="number" name="age" class="form-control">
                     </div>
-                    <a href="" class="btn btn-success" style="justify-items: center;">create</a>
+                    <button class="btn btn-success">Create</button>
                 </form>
                 <a href="/" class="btn btn-black" style="margin-top: 20px;">Home</a>
     </div>

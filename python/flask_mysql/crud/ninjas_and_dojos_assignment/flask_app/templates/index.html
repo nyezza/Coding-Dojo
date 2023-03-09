@@ -18,7 +18,7 @@
                         <label for="">name</label>
                         <input type="text" name="name" class="form-control">
                     </div>
-                    <a href="" class="btn btn-success" style="justify-items: center;">create</a>
+                    <button class="btn btn-success">Create</button>
                 </form>
             </div>
             <div class="col-6">
@@ -27,9 +27,8 @@
                     <tbody style="border: solid 02px black; width: 100px; padding: 20px;">
                         {% for x in all_dojos %}
                             <tr>
-                                <th>
-                                    <a href="">{{x.name}}</a>
-                                </th>
+                                <th><a href="/dojo/{{x.id}}">{{x.name}}</a></th>
+                                
                             
                             </tr>
                         {%endfor%}
