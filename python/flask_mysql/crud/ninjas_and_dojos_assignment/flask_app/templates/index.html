@@ -18,21 +18,24 @@
                         <label for="">name</label>
                         <input type="text" name="name" class="form-control">
                     </div>
-                    <a href="/" class="btn btn-success" style="justify-items: center;">create</a>
+                    <a href="" class="btn btn-success" style="justify-items: center;">create</a>
                 </form>
             </div>
             <div class="col-6">
                 <h2>All Dojo</h2>
-                <table class="table-striped" style="border: 2px solid black;">
-                    <tbody>
-                        {% for x in dojo_list %}
+                <table class="table-striped">
+                    <tbody style="border: solid 02px black; width: 100px; padding: 20px;">
+                        {% for x in all_dojos %}
                             <tr>
-                            <a href="">{{x.name}}</a>
+                                <th>
+                                    <a href="">{{x.name}}</a>
+                                </th>
+                            
                             </tr>
                         {%endfor%}
                     </tbody>
                 </table>
-                <a href="/create/ninja" class="btn btn-black" style="margin-top: 50px;">New Ninja</a>
+                <a href="/ninjas" class="btn btn-black" style="margin-top: 50px;">New Ninja</a>
             </div>
         </div>
     </div>

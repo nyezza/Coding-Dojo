@@ -11,11 +11,11 @@
 <body>
     <div class="container" style="margin: 0 auto; width: 300px;">
         <h1 class="text-center">New Ninja</h1>
-                <form action="/create/ninja" method="post">
+                <form action="/ninjas/new" method="post">
                     <div class="form-group">
                         <label for="">Dojo:</label>
                         <select name="Dojo" class="form-control">
-                            {% for y in dojo_list %}
+                            {% for y in all_dojos %}
                                 <option value="{{y.name}}" >{{y.name}}</option>
                             {%endfor%}
                         </select>
@@ -32,7 +32,7 @@
                         <label for="">Age:</label>
                         <input type="number" name="age" class="form-control">
                     </div>
-                    <a href="/" class="btn btn-success" style="justify-items: center;">create</a>
+                    <a href="" class="btn btn-success" style="justify-items: center;">create</a>
                 </form>
                 <a href="/" class="btn btn-black" style="margin-top: 20px;">Home</a>
     </div>
