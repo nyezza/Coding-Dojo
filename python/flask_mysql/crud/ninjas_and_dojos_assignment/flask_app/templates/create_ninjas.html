@@ -16,8 +16,7 @@
                         <label for="do">Dojo:</label>
                         <select name="dojo_id" class="form-control">
                             {% for y in all_dojos %}
-                                <option value="{{y.id}}" name="dojo_id" type="hidden" >{{y.name}}</option>
-                    
+                                <option value="{{y.id}}" name="name" type="hidden" >{{y.name}}</option>
                             {%endfor%}
                         </select>
                     </div>
