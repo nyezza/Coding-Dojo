@@ -21,6 +21,11 @@ class Dojos:
         for x in results:
             dojoslist.append(cls(x))
         return dojoslist
+    @classmethod
+    def get_name_by_id(cls,data):
+        query="""SELECT * FROM dojos WHERE id = %(id)s;"""
+        results= connectToMySQL(DATABASE).query_db(query,data)
+        return results[0]
     
     @classmethod
     def get_by_id(cls,data):

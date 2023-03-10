@@ -23,5 +23,6 @@ def display(id_dojo):
     da={
         "id":id_dojo
     }
+    dojo_name=Dojos.get_name_by_id(da)
     dojos_dicover=Dojos.get_by_id(da)
-    return render_template("display_dojos_ninjas.html",ninjas_list=dojos_dicover)
+    return render_template("display_dojos_ninjas.html",ninjas_list=dojos_dicover,dojo_name=dojo_name)
