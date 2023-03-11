@@ -13,10 +13,11 @@
         <div class="row" style="margin-top: 40px; display: flex; justify-content: space-around;">
             <div class="col-4">
                 <h2>Register</h2>
-                {% for message in  get_flashed_messages()%}
-                    <p class="text-danger"> {{message}}</p>
-                {%endfor%}
+                
                 <form action="/new" method="post">
+                    {% for message in  get_flashed_messages()%}
+                    <p class="text-danger"> {{message}}</p>
+                    {%endfor%}
                     <div class="form-group">
                         <label for="">First Name</label>
                         <input type="text" name="first_name" class="form-control">
@@ -42,10 +43,11 @@
             </div>
             <div class="col-4">
                 <h2>Login</h2>
-                {% for message in  get_flashed_messages()%}
-                    <p class="text-danger"> {{message}}</p>
-                {%endfor%}
+                
                 <form action="/user/login" method="post">
+                    {% for message in  get_flashed_messages()%}
+                    <p class="text-danger"> {{message}}</p>
+                    {%endfor%}
                     <div class="form-group">
                         <label for="">Email</label>
                         <input type="text" name="email" class="form-control">
