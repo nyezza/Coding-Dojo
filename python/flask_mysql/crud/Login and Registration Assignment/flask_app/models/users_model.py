@@ -32,6 +32,16 @@ class User:
         if len(results)<1:
             return False
         return cls(results[0])
+    
+    @classmethod
+    def get_by_id(cls,data):
+        query="""SELECT * FROM users WHERE id = %(id)s;"""
+        results=connectToMySQL(DATABASE).query_db(query,data)
+        print("="*15,results,"="*15)
+        if len(results)<1:
+            return False
+        return cls(results[0])
+        
     @staticmethod
     def validation(data):
         is_valid = True
