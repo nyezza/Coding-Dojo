@@ -23,33 +23,45 @@ class User:
     @classmethod
     def get_by_email(cls,data):
         query="""
-            SELECT * FROM users WHERE email=%(email)s;
+            SELECT * FROM users WHERE email = %(email)s;
         """
-        results=connectToMySQL(DATABASE).query_db(query.data)
+        results=connectToMySQL(DATABASE).query_db(query,data)
+        print(results)
         if len(results)<1:
             return False
         return cls(results[0])
+    
+    @classmethod
+    def get_by_id(cls,data):
+        query="""
+            SELECT * FROM users WHERE id= %(id)s;
+        """
+        results=connectToMySQL(DATABASE).query_db(query,data)
+        if len(results)<1:
+            return False
+        return cls(results[0])
+    
     
     @staticmethod
     def validation(data):
         is_valid=True
         if len(data['first_name'])<2:
             is_valid=False
-            flash("A valid First Name is really required!!!")
+            flash("A valid First Name is really required!!!","register")
         if len(data['last_name'])<2:
             is_valid=False
-            flash("A valid Last Name is really required!!!")
+            flash("A valid Last Name is really required!!!","register")
         if not EMAIL_REGEX.match(data['email']):
             is_valid = False
-            flash("A valid Last Name is really required!!!")
+            flash("A valid Last Name is really required!!!","register")
         elif User.get_by_email({'email':data['email']}):
             is_valid = False
-            flash("this email exist!!!!")
+            flash("this email exist!!!!","register")
         if len(data['password'])<7:
             is_valid = False
-            flash("password must have at least 7 caracters!!!!")
+            flash("password must have at least 7 caracters!!!!","register")
         elif (data['password'] != data['confirm_password']):
             is_valid = False
-            flash("password and his confirm must be identique!!!")
+            flash("password and his confirm must be identique!!!","register")
         return is_valid
         

@@ -9,22 +9,44 @@
     <title>Recipes Show</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome {{dojo_name.name}} </h1>
+    <div class="container-fluid">
+        <h1>Welcome {{user.first_name}} </h1>
+        <div class="row m-2">
+            <div class="col-8">
+                <h3>All Posted Recipes</h3>
+            </div>
+            <div class="col-4">
+                <a href="/logout" >logout</a>
+                <a href="/recipes/new" >+ create</a>
+            </div>
+        </div>
+                
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>Under 30 minutes ?</th>
+                    <th>Posted By</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                {%for z in recipes_list%}
+                {%for z in all_recipes%}
                     <tr>
                         <th>{{z.name}}</th>
-                        <th>{{z.under_30}}</th>
-                        <th>view | Delete | edit</th>
+                        <th>{% if z.under_30==1 %}
+                            Yes
+                            {%else%}
+                            No
+                            {%endif%}
+                        </th>
+                        <th>{{z.owner}}</th>
+                        <th>
+                            <a href="/recipes/{{z.id}}">view </a> | 
+                            {%if z.user_id == user.id%}
+                            <a href="/recipes/edit/{{z.id}}">edit </a> | <a href="/remove/{{z.id}}">delete</a>
+                            {%endif%}
+                        </th>
                     </tr>
                 {%endfor%}
             </tbody>

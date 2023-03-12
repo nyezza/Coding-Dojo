@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>New Ninja</title>
+    <title>Recipes</title>
 </head>
 <body>
     <div class="container" style="margin: 0 auto; width: 300px;">
         <div style="display: flex; justify-content: space-between;">
             <h1 class="text-center">Welcome {{first_name}}</h1>
             <div style="display: flex; justify-content: space-around;">
-                <a href="/" class="btn btn-black" style="margin-top: 20px;">Home</a>
+                <a href="/dashboard" class="btn btn-black" style="margin-top: 20px;">Dashboard</a>
                 <a href="/logout" class="btn btn-black" style="margin-top: 20px;">Logout</a>
             </div>
 
@@ -21,24 +21,24 @@
         
         <div class="row">
             <div class="col-6"  style="border:02px solid black">
-                <h2>{{name}}</h2>
+                <h2> Welcome {{recipe.owner}}!</h2>
                 <table>
                         <tbody>
                             <tr>
                                 <th>Description:</th>
-                                <th>{{description}}</th>
+                                <th>{{recipe.description}}</th>
                             </tr>
                             <tr>
                                 <th>Under 30 minutes:</th>
-                                <th>{{under_30}}</th>
+                                <th>{{recipe.under_30}}</th>
                             </tr>
                             <tr>
                                 <th>Instructions:</th>
-                                <th>{{instruction}}</th>
+                                <th>{{recipe.instruction}}</th>
                             </tr>
                             <tr>
                                 <th>Date Made:</th>
-                                <th>{{date_made}}</th>
+                                <th>{{recipe.date_made}}</th>
                             </tr>
                         </tbody>
                 </table>

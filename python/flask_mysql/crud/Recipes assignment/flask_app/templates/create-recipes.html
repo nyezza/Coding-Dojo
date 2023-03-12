@@ -12,43 +12,44 @@
     <div class="container">
         <div style="display: flex; justify-content: space-around;">
             <h1 class="text-center">Add New Recipe</h1>
-            <a href="/" class="btn btn-black" style="margin-top: 20px;">Home</a>
+            <a href="/dashboard" class="btn btn-black" style="margin-top: 20px;">back to recipes</a>
+            <a href="/logout" class="btn btn-black" style="margin-top: 20px;">logout</a>
         </div>
-                <form action="/ninjas/new" method="post">
-                    <div class="row">
+        {% for message in get_flashed_messages()%}
+            <p class="text-danger">{{message}}</p>
+        {%endfor%}
+                <form action="/recipes/create" method="post" class="row text-center p-3">
                     <div class="col-6">
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <label for="">Name:</label>
-                                    <input type="text" name="name" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Description:</label>
-                                    <input type="text" name="discription" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Instruction:</label>
-                                    <input type="text" name="instruction" class="form-control">
-                                </div>
-                            </div>
+                    <div class="form-group">
+                        <label for="">Name:</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description:</label>
+                        <input type="text" name="description" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Instruction:</label>
+                        <input type="text" name="instruction" class="form-control">
+                    </div>
                     </div>
                     <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Date Made:</label>
+                            <input type="date" name="date_made" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Under 30 Minutes:</label>
                             <div class="form-group">
-                                <div class="form-group">
-                                    <label for="">Date Made:</label>
-                                    <input type="date" name="date_made" class="form-control">
-                                </div>
-                                    <label for="">Under 30 Minutes:</label>
-                                    <div class="form-group">
-                                        <input type="radio" name="under_30" value="1" checked>
+                                <input type="radio" name="under_30" value="1" checked>
                                         <label for="">Yes</label>
                                         <input type="radio" name="under_30" value="0">
                                         <label for="">No</label>
-                                    </div>
-                                <button class="btn btn-success">Create</button>
+                                </div>
                             </div>
+                            <button class="btn btn-success">Create</button>
+                        </div>
                             
-                    </div>
                     </div>
                 </form>
     </div>
