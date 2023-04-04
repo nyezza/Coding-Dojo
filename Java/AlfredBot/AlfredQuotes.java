@@ -5,6 +5,10 @@ public class AlfredQuotes {
         // You do not need to code here, this is an example method
         return "Hello, lovely to see you. How are you?";
     }
+
+    public String gusestGreeString(){
+        return "please enter the name";
+    }
     
     public String guestGreeting(String name) {
         // YOUR CODE HERE

@@ -10,6 +10,7 @@ public class AlfredTest {
         
         // Make some test greetings, providing any necessary data
         String testGreeting = alfredBot.basicGreeting();
+        String testNadhirGreating = alfredBot.gusestGreeString();
         String testGuestGreeting = alfredBot.guestGreeting("Beth Kane");
         String testDateAnnouncement = alfredBot.dateAnnouncement();
         
@@ -21,6 +22,7 @@ public class AlfredTest {
         System.out.println(testGreeting);
         
         // Uncomment these one at a time as you implement each method.
+        System.out.println(testNadhirGreating);
         System.out.println(testGuestGreeting);
         System.out.println(testDateAnnouncement);
         // System.out.println(alexisTest);
