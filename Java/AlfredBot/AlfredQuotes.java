@@ -8,6 +8,7 @@ public class AlfredQuotes {
     
     public String guestGreeting(String name) {
         // YOUR CODE HERE
+        
         String guestGreetingMsg = String.format("Hello, %s ,lovely to see you. How are you?", name);
 
         return guestGreetingMsg;
@@ -20,21 +21,21 @@ public class AlfredQuotes {
     
     public String respondBeforeAlexis(String conversation) {
         // YOUR CODE HERE
-        String mesgReceive= "example of converstaion";
-        int a = mesgReceive.indexOf("Alexis");
-        int b = mesgReceive.indexOf("Alfred");
+        
+        int a = conversation.indexOf("Alexis");
+        int b = conversation.indexOf("Alfred");
         String responseMsg;
 
         if (a>=0){
-            mesgReceive = "Right away, sir. She certainly isn't sophisticated enough for that.";
+            responseMsg = "Right away, sir. She certainly isn't sophisticated enough for that.";
         }
         else if (b>=0){
-            mesgReceive = "At your service. As you wish, naturally.";
+            responseMsg = "At your service. As you wish, naturally.";
         }
         else {
-            mesgReceive = "Right. And with that I shall retire." ;
+            responseMsg = "Right. And with that I shall retire." ;
         }
-        return mesgReceive;
+        return responseMsg;
     }
     
 	// NINJA BONUS
