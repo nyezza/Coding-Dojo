@@ -65,11 +65,14 @@ public class CafeUtil {
     }
 
     void addCustomers(ArrayList<String> customers){
-        String user= customers.get(customers.size()-1);
-        while (user != "q"){
-            System.out.println("Please enter your name:");
+        String user= "";
+        
+        while ( customers.indexOf("q")< 0){
+            System.out.println("\n Please enter your name:");
             user = System.console().readLine();
             customers.add(user);
-        }
-    }
+            System.out.println(" \n if you have finished entering please press q else");
+            }
+
+        }    
 }
