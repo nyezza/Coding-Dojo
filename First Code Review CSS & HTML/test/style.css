@@ -1,0 +1,63 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.describe{
+display: flex;
+justify-content: space-around;
+}
+.name{
+    font: bold;
+    font-size: xx-large;
+}
+.describe{
+    font:bold;
+    font-size: x-large;
+}
+
+main{
+    background-color: rgb(74, 55, 63);
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+}
+
+.PhotoAbout{
+    display: inline-block;
+    padding: 50px;
+}
+/*img.PhotoAbout {
+    height: 02%;
+    width: 02%;
+    margin-top: 05px;
+    margin-left: 05px;
+    justify-content: left;
+    border: 02 solid black;
+}*/
+.about{
+    justify-content: right;
+    margin-top: 05px;
+    margin-right: 01px;
+    
+
+}
+#entete{
+    background-color:rgb(159, 158, 166) ;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    width: 50%;
+    margin-top: 05px;
+    margin-right: 05px;
+    
+}
+#describtion{
+    background-color: rgb(225, 212, 224);
+    color: rgb(235, 231, 237);
+    height: auto;
+    width: 50%;
+    margin-top: 05px;
+    margin-right: 05px;
+    
+}

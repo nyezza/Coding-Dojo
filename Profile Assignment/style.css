@@ -1,0 +1,242 @@
+            /*universal standard*/
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+        /* Header part*/
+#Header{
+    background: black;  
+    padding: 20px;
+    
+
+}
+#mainhead{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 700px;
+    align-items: center;
+    
+}
+
+#right_part{
+    color: white;
+    align-items: center;
+    margin-left: 10px;
+    display: flex;
+}
+
+#link{
+    display: flex;
+    margin-left: 20px;
+    color: rgb(160,160,160);
+    align-items: center;
+}
+
+#link h4{
+    margin-right: 20px;
+}
+
+.button button{
+    background-color: rgb(23,162,184);
+    color: white;
+    padding: 3px 10px;
+    justify-items: right;
+    font-style:normal;
+    font-weight: bolder;
+}
+        /*end of the header part*/
+        
+            /*main part*/
+
+            /*universal main styling*/
+#main{
+    width: 700px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    justify-content:space-around;
+    align-content: space-between;
+}
+
+                    /* first container*/
+#container1{
+    height: 280px;
+    width: 350px;
+    border: 04px solid rgb(204,204,204);
+    margin:10px;
+}
+
+                /* upper*/
+#upper{
+    padding: 40px;
+    background-color: rgb(23,162,184);
+}
+#upper img{
+    width: 50px;
+    height: 50px;
+    border: 02px solid gray;
+    border-radius: 50%;
+    margin-top: 05px;
+    position: fixed;
+}
+
+            /*main container 1*/
+#main1{
+    margin-top: 35px;
+    margin-left: 15px;
+}
+#seatle{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#seatle > img{
+    height: 20px;
+    width: 10px;
+}
+#description{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#edit{
+    align-items: center;
+}
+#edit img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+#edit a{
+    color: rgb(32,90,151);
+}
+
+                    /*   End of Container1 styling*/
+
+                    /* Container 2 styling*/
+#container2{
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    border: 04px solid rgb(204,204,204);
+    
+}
+.upper2{
+    background-color: rgb(51,51,51);
+    padding: 05px;
+    display: flex;
+    align-items: center;
+}
+.upper2 p{
+    border: none;
+    border-radius: 50%;
+    background-color:rgb(204,204,204) ;
+    margin-left: 05px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    padding: 07px;
+}
+
+.upper2 h4{
+    font-size: 12px;
+    color:rgb(254,254,254)
+}
+.main2{
+    margin: 10px;
+}
+.todsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nameuser{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.Profileimg {
+    height: 30px;
+    width: 30px;
+    border: 05;
+    border-radius: 50%;
+}
+.ok-btn, .decline-btn{
+    height: 20px;
+    width: 20px;
+}
+
+.nameuser p{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+                    /* end of container 2 styling*/
+
+                    /* Container 3 styling*/
+
+#container3{
+    width: 350px;
+    height: 130px;
+    border: 04px solid rgb(204,204,204);
+    margin: 10px;
+}
+.upper2 h4{
+    margin-left: 20px ;
+}
+
+#learn{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#datelearn{
+    margin-top: 05px;
+    margin-left: 10px;
+    color: rgb(102,102,102);
+    font-size: 14px;
+    font-weight: bolder;
+}
+#deslearn{
+    margin-top: 05px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+                    /* end of container 3 styling */
+
+                    /* Container 4 Styling */
+
+#container4{
+    width: 200px;
+    height: 280px;
+    
+    border: 04px solid rgb(204,204,204);
+}
+.nameuser1{
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.nameuser1 p{
+    margin-left: 10px;
+    font-weight: bold;
+}
+#footer{
+    padding: 10px;
+    border-top: 04px solid rgb(204,204,204);
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+#vmore{
+    margin-left: 10px;
+    color: rgb(29,89,151);
+    font-size: 14px;
+}

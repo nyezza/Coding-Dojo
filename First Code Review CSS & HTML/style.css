@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+background-color: whitesmoke;
+width: 970px;
+margin:auto;
+align-items: center;
+justify-content: center;
+}
+
+                                    /*Header Part*/
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+                                    /*Main*/
+
+                                    /*Part1 of main*/
+#main{
+    background:linear-gradient(rgb(74,54,62),rgb(111,89,100),rgb(72,53,61)) ;
+    padding: 15px;
+}
+
+#description{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#me img{
+    width: 400px;
+    border: solid 05px grey;
+}
+
+#aboutme_section{
+    background:linear-gradient(to bottom right,rgb(238, 218, 218),rgb(243, 203, 203));
+    width: 500px;
+    margin-bottom: 05px;
+}
+
+#aboutme_section h2{
+    margin-bottom: 10px;
+    background:linear-gradient(to bottom right, rgb(105, 104, 104),rgb(230, 227, 227));
+    color: white;
+    padding: 05px;
+}
+
+#aboutme_section p {
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+#aboutme_section a{
+    color: blueviolet;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+                
+                                        /*Part2 of main*/
+
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.technologies{
+    width: 300px;
+    height: 570px;
+    background:linear-gradient(to bottom right,rgb(238, 218, 218),rgb(243, 203, 203)); 
+}
+
+.technologies h2{
+    color: white;
+    font-weight: bold;
+    background:linear-gradient(to bottom right, rgb(105, 104, 104),rgb(230, 227, 227));
+    margin:0px;
+    padding: 05px;
+}
+
+.technologies p{
+    margin: 0px 10px 50px 10px;
+    
+
+}
+.technologies img{
+    width: 300px;
+}
+
+.LogoSkills{
+    align-items: center;
+}
+.LogoSkills img{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.technologies button{
+    background-color: green;
+    border-radius: 05px;
+    border: 0;
+    padding: 02px 05px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 110px;
+    font-size: large;
+}
+
+                                        /* footer Parts*/
+
+#footer {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#MORE{
+    display: flex;
+    align-content: center;
+    margin: auto;
+    width: 350px;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.MyLink img{
+    width: 10px;
+}
+
+.MyLink a{
+    margin-left: 02px;
+    margin-right: 05px;
+}

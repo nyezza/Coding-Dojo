@@ -1,0 +1,40 @@
+*{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+#button1, #button2, #button3{
+    display: block;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+#button1{
+    font-weight: 900;
+    width: 100px;
+    border-radius: 20px;
+    border: 2px solid rgb(90, 136, 44);
+    background-color: whitesmoke;
+    color: rgb(90, 136, 44);
+
+}
+
+#button2{
+    font-weight: 900;
+    width: 40px;
+    color: white;
+    background-color: rgb(46, 156, 138);
+    border: none;
+    border-radius: 50%;
+}
+
+#button3{
+    font-weight: 200;
+    width: 150px;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+    background-color: rgb(28, 13, 231);
+    color: white;
+}
+
+

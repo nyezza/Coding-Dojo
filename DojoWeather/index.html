@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Weather Forecast </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="top-header">
+                <h1>Dojo Weadher</h1>
+                <div class="nav-bar">
+                    <button onclick="ChangeCity()">Burbank</button>
+                    <button onclick="ChangeCity()">Chicago</button>
+                    <button onclick="ChangeCity()">Dallas</button>
+                </div>
+        </div>
+            
+        </div>
+        <div class="main">
+            <div class="top-bar">
+                <h1>San Jose</h1>
+                <div class="unit-choise">
+                    <label> show temperature in :</label>
+                    <select name="temperature" id="temp-select" onchange="ConvertTmp('tday1')">
+                        <option value="°C">°C</option>
+                        <option value="°F">°F</option>
+                    </select>
+                </div>
+            </div>
+            <div class="presentation">
+                <div class="one-day">
+                    <h2>Today</h2>
+                    <img src="assets/some_rain.png" alt="some-rain">
+                    <p>some rain</p>
+                    <div class="estimation">
+                        <div class="day"><p><span id="tday">24</span>°</p></div>
+                        <div class="night"><p><span id="tnight">18</span>°</p></div>
+                    </div>
+                </div>
+                <div class="one-day">
+                    <h2>Tomorrow</h2>
+                    <img src="assets/some_sun.png" alt="some-sun">
+                    <p>some sun</p>
+                    <div class="estimation">
+                        <div class="day"><p><span id="tday">27</span>°</p></div>
+                        <div class="night"><p><span id="tnight">19</span>°</p></div>
+                    </div>
+                </div>
+                <div class="one-day">
+                    <h2>Friday</h2>
+                    <img src="assets/some_clouds.png" alt="some-cloud">
+                    <p>some cloud</p>
+                    <div class="estimation">
+                        <div class="day"><p><span id="tday">21</span>°</p></div>
+                        <div class="night"><p><span id="tnight">16</span>°</p></div>
+                    </div>
+                </div>
+                <div class="one-day">
+                    <h2>Saturday</h2>
+                    <img src="assets/some_sun.png" alt="some-sun">
+                    <p>some sun</p>
+                    <div class="estimation">
+                        <div class="day"><p><span id="tday">26</span>°</p></div>
+                        <div class="night"><p><span id="tnight">21</span>°</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            
+            <img src="assets/cookie.png" alt="Cookies">
+            <div class="notice">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize
+                content and ads, to provide social media features and to 
+                analyse our traffic.<a href="#"*>Read more</a>
+                </p>
+            </div>
+            <button id="popup-btn" onclick="RmPopup()">I Accept</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
