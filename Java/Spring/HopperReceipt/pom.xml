@@ -22,7 +22,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -39,8 +38,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-	<dependency>
+		<dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
@@ -52,6 +50,19 @@
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
         </dependency>
+        <dependency>
+        <groupId>org.webjars</groupId>
+        <artifactId>webjars-locator</artifactId>
+        <version>0.46</version>
+    	</dependency>
+    
+    <!-- BOOTSTRAP DEPENDENCIES -->
+    	<dependency>
+        	<groupId>org.webjars</groupId>
+        	<artifactId>bootstrap</artifactId>
+        	<version>5.2.3</version>
+    	</dependency>
+
 	</dependencies>
 
 	<build>

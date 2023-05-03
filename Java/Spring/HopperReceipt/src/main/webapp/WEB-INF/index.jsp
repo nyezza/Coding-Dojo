@@ -6,6 +6,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Simple Receipt</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script type="text/javascript" src="/js/app.js"></script>
 </head>
 <body>
 	<h1>Customer Name : <c:out value="${name}" /></h1>
