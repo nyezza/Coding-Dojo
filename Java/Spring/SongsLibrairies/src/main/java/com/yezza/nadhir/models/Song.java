@@ -55,14 +55,14 @@ public class Song {
 	//many to one _ create the relation between tables
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "album_id")
-	private Album matchingalbum;
+	private Album matchingAlbum;
 	
 	//getter and setter of relationship
 	public Album getMatchingalbum() {
-		return matchingalbum;
+		return matchingAlbum;
 	}
-	public void setMatchingalbum(Album matchingalbum) {
-		this.matchingalbum = matchingalbum;
+	public void setMatchingalbum(Album matchingAlbum) {
+		this.matchingAlbum = matchingAlbum;
 	}
 	
 	
