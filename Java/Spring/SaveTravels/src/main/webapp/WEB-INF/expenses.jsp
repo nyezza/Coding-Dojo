@@ -29,11 +29,11 @@
 			</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${onetravel}" var="onetravel">
+		<c:forEach items="${travels}" var="travel">
 			<tr style="text-align: center">
-			<td><a href="/expenses/view/${onetravel.id}"><c:out value="${onetravel.expense}"/></a></td>
-			<td><c:out value="${onetravel.vendor}"/></td>
-			<td><p>$</p><c:out value="${onetravel.amount}"/></td>
+			<td><a href="/expenses/view/${travel.id}"><c:out value="${travel.expense}"/></a></td>
+			<td><c:out value="${travel.vendor}"/></td>
+			<td><p>$</p><c:out value="${travel.amount}"/></td>
 			</tr>
 		</c:forEach>
 		</tbody>
@@ -56,11 +56,11 @@
 			<form:errors path="amout"/>
 			<form:input type="number" step="0.01" min="0" path="amount"/>
 		</p>
-		<p>
-			<form:label path="description">Description:</form:label><hr />
+		
+		<p><form:label path="description">Description:</form:label><hr />
 			<form:errors path="description"/>
-			<form:input path="description"/>
-		</p>
+			<form:input path="description"/></p>
+			
 		<input type="submit" value="submit" class="btn btn-success">
 	</form:form>
 </div>

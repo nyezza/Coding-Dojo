@@ -16,6 +16,7 @@ public class TravelService {
 	
 	// Find All
 	public List<Travel> findAllTravel() {
+		//return expensRepo.findAll();
 		return expensRepo.findAll();
 	}
 	

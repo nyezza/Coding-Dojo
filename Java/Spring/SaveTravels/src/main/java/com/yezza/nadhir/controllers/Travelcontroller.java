@@ -21,9 +21,9 @@ public class Travelcontroller {
 	private TravelService travelService;
 	
 	@GetMapping("/expenses")
-	public String index(@ModelAttribute("onetravel")Travel travel,Model model) {
+	public String index(@ModelAttribute("travel")Travel travel,Model model) {
 		List<Travel> allTravel = travelService.findAllTravel();
-		model.addAttribute("onetravel", allTravel);
+		model.addAttribute("travels", allTravel);
 		return "expenses.jsp";
 	}
 	@PostMapping("/expenses")

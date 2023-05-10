@@ -5,11 +5,9 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.yezza.nadhir.models.Travel;
+import com.yezza.nadhir.models.Ninja;
 @Repository
-public interface ExpensRepository extends CrudRepository<Travel, Long> {
+public interface NinjaRepository extends CrudRepository<Ninja, Long> {
 	
-	//List<Travel> findAll();
-	List<Travel> fi
-
+	List<Ninja> findAll();
 }
