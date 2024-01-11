@@ -16,6 +16,15 @@ class User:
         self.updated_at=data['updated_at']
         
     @classmethod
+    def all_users(cls):
+        query=""" select * from users"""
+        results=connectToMySQL(DATABASE).query_db(query)
+        allUser=[]
+        for x in results:
+            allUser.append(x)
+        return allUser
+    
+    @classmethod
     def new_user(cls,data):
         query="""insert into users (first_name,last_name,email,password) values(%(first_name)s,%(last_name)s,%(email)s,%(password)s)"""
         return connectToMySQL(DATABASE).query_db(query,data)
