@@ -1,6 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app import DATABASE
-from flask_app.models.user_models import User
+from flask_app.models import user_models
 from flask import flash
 import re
 
@@ -12,6 +12,8 @@ class Book:
         self.description=data['description']
         self.created_at=data['created_at']
         self.updated_at=data['updated_at']
+        self.owner= {'first_name':user_models.User.get_by_id({"id":self.user_id}).first_name ,
+                     'last_name':user_models.User.get_by_id({"id":self.user_id}).last_name}
         
     @classmethod
     def create_book(cls,data):
@@ -23,13 +25,13 @@ class Book:
 
     @classmethod
     def get_all(cls):
-            query="""SELECT * FROM books JOIN users ON user_id = %(User.id)s"""
+            query="""SELECT * FROM books """
             results= connectToMySQL(DATABASE).query_db(query)
             print(results)
-            # allBooks=[]
-            # for x in results:
-            #     allBooks.append(cls(x))
-            # return allBooks
+            allBooks=[]
+            for x in results:
+                allBooks.append(cls(x))
+            return allBooks
 
     @classmethod
     def get_by_id(cls,data):
@@ -38,6 +40,14 @@ class Book:
             if len(results)<1:
                 return False
             return cls(results[0])
+        
+    @classmethod
+    def update(cls,data):
+        query="""UPDATE books 
+            SET title = %(title)s , description = %(description)s
+            WHERE id= %(id)s;
+        """
+        return connectToMySQL(DATABASE).query_db(query,data)
     
     @staticmethod
     def validation(data):
@@ -49,3 +59,8 @@ class Book:
             is_valid=False
             flash("A valid description is really required!!! , at least should contain 3 characters!!!","create")
         return is_valid
+    
+    @classmethod
+    def remove(cls,data):
+        query="""DELETE FROM books where id=%(id)s"""
+        return connectToMySQL(DATABASE).query_db(query,data)

@@ -40,9 +40,17 @@
                 </div>
                 <div class="col-4">
                     <h2>All Books</h2>
+                    
                     {% for z in books%}
-                    <a href="/books/{{z.id}}">{{z.title}}</a>
-                    <p>(added by {{z.user_id}})</p>
+
+                     {% if z.user_id == user.id %}
+                     <a href="/books/edit/{{z.id}}" >{{z.title}}</a>
+                     {%else%}
+                     <a href="/books/{{z.id}}">{{z.title}}</a>
+                    {%endif%}
+                    <p>(added by {{z.owner.first_name}} {{z.owner.last_name}})</p>
+                    
+                    <a href="/like/{{z.id}}">Like This Book</a>
                     {%endfor%}
                 </div>
             </div>
