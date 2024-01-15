@@ -14,15 +14,21 @@ class User:
         self.password=data['password']
         self.created_at=data['created_at']
         self.updated_at=data['updated_at']
+      
+    
         
     @classmethod
     def all_users(cls):
+        
         query=""" select * from users"""
         results=connectToMySQL(DATABASE).query_db(query)
+        print(results)
         allUser=[]
         for x in results:
-            allUser.append(x)
+                allUser.append(x)
         return allUser
+        
+        
     
     @classmethod
     def new_user(cls,data):

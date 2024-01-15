@@ -24,7 +24,7 @@ def register():
     }
     user_id=User.create_user(user_data)
     session[user_id]=user_id
-    return redirect('/books')
+    return redirect('/')
     
 
 @app.route('/user/login',methods=['post'])
@@ -48,7 +48,8 @@ def logout():
 def dashboard():
     if 'user_id' not in session:
         return redirect('/')
-    all_books=Book.get_all()
+    
     logged_in_user=User.get_by_id({'id': session['user_id']})
+    all_books=Book.get_all()
     return render_template("dashboard.html",user= logged_in_user,books=all_books)
 

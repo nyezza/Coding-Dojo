@@ -17,14 +17,14 @@
             </div>
         </div>
         <hr>
-        <div class="container"style="justify-content: center;">
+        
             <div class="row" style="margin-top: 40px; display: flex; justify-content: space-around;">
                 <div class="col-4">
                     <h2>add a new Book</h2>
-                    {% for message in get_flashed_messages(category_filter=["register"])%}
+                    {% for message in get_flashed_messages(category_filter=["create"])%}
                             <p class="text-danger">{{message}}</p>
                     {%endfor%}
-                    <form action="" method="post">
+                    <form action="/books/create" method="post">
                         
                         <div class="form-group">
                             <label for="">Title: </label>
@@ -40,23 +40,13 @@
                 </div>
                 <div class="col-4">
                     <h2>All Books</h2>
-                    {% for message in get_flashed_messages(category_filter=["login"])%}
-                            <p class="text-danger">{{message}}</p>
+                    {% for z in books%}
+                    <a href="/books/{{z.id}}">{{z.title}}</a>
+                    <p>(added by {{z.user_id}})</p>
                     {%endfor%}
-                    <form action="/user/login" method="post">
-                        <div class="form-group">
-                            <label for="">Email</label>
-                            <input type="email" name="email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Password</label>
-                            <input type="password" name="password" class="form-control">
-                        </div>
-                        <button class="btn btn-success">Submit</button>
-                    </form>
                 </div>
             </div>
-        </div>
+        
     </div>
 </body>
 </html>
