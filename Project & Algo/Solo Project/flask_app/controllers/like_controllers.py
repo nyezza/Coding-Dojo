@@ -12,7 +12,7 @@ def add_like(book_id):
         'book_id':book_id
     }
     Liked.add_like(data)
-    return redirect('/books')
+    return redirect('/books/book_id')
 
 # @app.route('/save_like',methods=['post'])
 # def save_like():

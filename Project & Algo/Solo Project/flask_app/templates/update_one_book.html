@@ -37,8 +37,19 @@
                    
                <div class="col-4">
                    <h2>Users who likes this book :</h2>
-                   <a href="/books/like">Add to Favorite</a>
+                   {% for x in liked_book %}
+                   <li>{{x.first_name}} {{x.last_name}} </li>
+                   {%endfor%}
+
+                   {%for y in liked_book%}
+                   {% if y.user_id != user.id %}
+                   <a href="/like/{{oneBook.id}}"> Add to Favorite </a>
+                   {%else %}
+
+                   <p> you liked this book</p>
                    
+                   {%endif%}
+                   {%endfor%}
                </div>
            </div>
        

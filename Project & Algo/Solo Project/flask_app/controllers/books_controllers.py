@@ -22,7 +22,7 @@ def view_one(book_id):
         return redirect('/')
     logged_in_user=User.get_by_id({'id': session['user_id']})
     oneBook=Book.get_by_id({'id':book_id})
-    liked_book=Liked.get_book_by_id({'book_id':book_id})
+    liked_book=Book.get_user_book_by_id({'id':book_id})
     return render_template("view_one_book.html",oneBook=oneBook,user=logged_in_user, liked_book=liked_book)
 
 @app.route('/books/edit/<int:book_id>')
@@ -31,7 +31,8 @@ def edit_one(book_id):
         return redirect('/')
     logged_in_user=User.get_by_id({'id': session['user_id']})
     oneBook=Book.get_by_id({'id':book_id})
-    return render_template("update_one_book.html",oneBook=oneBook,user=logged_in_user)
+    liked_book=Book.get_user_book_by_id({'id':book_id})
+    return render_template("update_one_book.html",oneBook=oneBook,user=logged_in_user, liked_book=liked_book)
 
 @app.route('/books/update' , methods=['post'])
 def update_one():

@@ -28,7 +28,10 @@
                    
                <div class="col-4">
                    <h2>Users who likes this book :</h2>
-                   {% if oneBook.id == liked_book.book_id %}
+                   {% for x in liked_book %}
+                   <p>{{x.liker.first_name}}</p>
+                   {%endfor%}
+                   {% if oneBook.id == x.book_id %}
                    <p> you liked this book</p>
                    {%else%}
                    <a href="/like/{{oneBook.id}}">Add to Favorite</a>

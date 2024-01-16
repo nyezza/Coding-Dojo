@@ -37,9 +37,24 @@ class Book:
     def get_by_id(cls,data):
             query="""SELECT * FROM books where id = %(id)s;"""
             results=connectToMySQL(DATABASE).query_db(query,data)
+            print(results)
             if len(results)<1:
                 return False
             return cls(results[0])
+    @classmethod
+    def get_user_book_by_id(cls,data):
+        
+        query= """select * from 
+                users_liked_books inner join
+                books on %(id)s = users_liked_books.book_id inner join
+                users on users.id = users_liked_books.user_id;"""
+        
+        results=connectToMySQL(DATABASE).query_db(query,data)
+        print (results)
+        bookfound=[]
+        for x in results:
+                bookfound.append(x)
+        return bookfound
         
     @classmethod
     def update(cls,data):
